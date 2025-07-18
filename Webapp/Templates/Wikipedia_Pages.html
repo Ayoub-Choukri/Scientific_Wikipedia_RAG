@@ -1,0 +1,40 @@
+{% extends "Base.html" %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='css/Wikipedia_Pages.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="wiki-explorer">
+
+        <!-- Barre d'instructions en haut -->
+        <div class="instructions-bar">
+            <p id="file-message">Sélectionnez une page pour afficher son contenu.</p>
+            <a id="download-button" class="download-btn" href="#" download style="display: none;">
+                📥 Télécharger le fichier
+            </a>
+        </div>
+
+        <!-- Corps principal : liste à gauche / contenu à droite -->
+        <div class="wiki-body">
+            <!-- Navigateur de fichiers -->
+            <div class="file-browser">
+                <input type="text" id="search-input" placeholder="Rechercher une page..." />
+                <ul id="file-list" class="scrollable-list"></ul>
+            </div>
+
+            <!-- Affichage du contenu -->
+            <div class="file-content" id="file-content">
+                <div id="selected-filename" class="filename-display" style="display: none;"></div>
+                <pre id="file-text"></pre>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{{ url_for('serve_static', filename='javascript/Wikipedia_Pages.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "Base.html" %}
+
+{% block content %}
+    <section class="hero">
+        <h1>Bienvenue sur mon projet RAG</h1>
+        <p>Je suis <strong>Ayoub CHOUKRI</strong>, ingénieur en Intelligence Artificielle.</p>
+        <p>Ce projet est un système <strong>RAG (Retrieval-Augmented Generation)</strong> entraîné sur des pages extraites de Wikipédia. Il permet de récupérer des informations pertinentes et de générer des réponses basées sur ces données.</p>
+        <p>Explorez les sections suivantes :</p>
+        <ul class="action-links">
+            <li><a href="/Wikipedia_Pages" class="btn">Voir les pages Wikipédia</a></li>
+            <li><a href="{{ url_for('Api_Webapp_Rag_Using_Page.Home_Page_Rag_Using_Page') }}" class="btn">Utiliser le RAG</a></li>
+        </ul>
+    </section>
+{% endblock %}
