@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  webapp:
+    build:
+      context: ../../
+      dockerfile: Docker/Dockerfiles/Dockerfile.webapp
+    ports:
+      - "5000:5000"
+    environment:
+      - MODEL_API_HOST=model
+      - FLASK_ENV=development
+      - IN_DOCKER=True

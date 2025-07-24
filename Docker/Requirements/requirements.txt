@@ -9,5 +9,4 @@ matplotlib==3.10.3
 networkx==3.3
 Requests==2.32.4
 tqdm==4.66.4
-tqdm==4.66.5
 Wikipedia_API==0.8.1
