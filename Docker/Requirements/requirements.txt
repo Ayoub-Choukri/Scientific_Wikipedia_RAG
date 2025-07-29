@@ -10,3 +10,4 @@ networkx==3.3
 Requests==2.32.4
 tqdm==4.66.4
 Wikipedia_API==0.8.1
+sentence-transformers == 5.0.0

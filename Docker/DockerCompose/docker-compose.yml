@@ -11,3 +11,12 @@ services:
       - MODEL_API_HOST=model
       - FLASK_ENV=development
       - IN_DOCKER=True
+      - NVIDIA_VISIBLE_DEVICES=all   # 👈 Indispensable !
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
+    runtime: nvidia   # 👈 Ajoute ceci
